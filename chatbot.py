@@ -7,7 +7,8 @@ system_prompt = st.sidebar.text_area("System Prompt", value="""
 You are a polite chatbot that answers concisely and truthfully.
 """.strip())
 
-bot = Chatbot('open-mixtral-8x7b', system_prompt=system_prompt)
+# bot = Chatbot('open-mixtral-8x7b', system_prompt=system_prompt)
+bot = Chatbot('codestral-2405', system_prompt=system_prompt)
 
 if st.sidebar.button("Reset conversation"):
     bot.reset()
