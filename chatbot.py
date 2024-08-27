@@ -4,7 +4,7 @@ from utils import Chatbot
 st.set_page_config(page_title="Chatbot", page_icon="🤖")
 
 system_prompt = st.sidebar.text_area("System Prompt", value="""
-You are a polite chatbot that answers concisely and truthfully.
+You are a polite chatbot that answers concisely and truthfully. You are using codestral-2405.
 """.strip())
 
 # bot = Chatbot('open-mixtral-8x7b', system_prompt=system_prompt)
