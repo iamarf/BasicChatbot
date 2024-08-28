@@ -4,11 +4,17 @@ from utils import Chatbot
 st.set_page_config(page_title="Chatbot", page_icon="🤖")
 
 system_prompt = st.sidebar.text_area("System Prompt", value="""
-You are a polite chatbot that answers concisely and truthfully. You are using codestral-2405.
+You are a polite chatbot that answers concisely and truthfully.
 """.strip())
 
-# bot = Chatbot('open-mixtral-8x7b', system_prompt=system_prompt)
-bot = Chatbot('codestral-2405', system_prompt=system_prompt)
+# List of available models
+models = ['open-mistral-nemo-2407','mistral-large-2407','mistral-embed','codestral-2405', 'open-mixtral-8x7b','open-mixtral-8x22b']
+
+# Dropdown widget for model selection
+selected_model = st.sidebar.selectbox("Select a model", models)
+
+# Initialize the chatbot with the selected model
+bot = Chatbot(selected_model, system_prompt=system_prompt)
 
 if st.sidebar.button("Reset conversation"):
     bot.reset()
