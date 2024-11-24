@@ -8,7 +8,7 @@ You are a polite chatbot that answers concisely and truthfully.
 """.strip())
 
 # List of available models
-models = ['open-mistral-nemo-2407','mistral-large-2407','mistral-embed','codestral-2405', 'open-mixtral-8x7b','open-mixtral-8x22b']
+models = ['open-mistral-nemo-2407','mistral-large-2407','mistral-embed','codestral-2405', 'open-mixtral-8x7b','open-mixtral-8x22b','mistral-large-latest']
 
 # Dropdown widget for model selection
 selected_model = st.sidebar.selectbox("Select a model", models)
